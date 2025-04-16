@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор тюнинга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>Калькулятор тюнинга</h1>
+
+        <div class="form-group">
+            <label for="mark">Марка:</label>
+            <select id="mark" name="mark">
+                <option value="">--Выберите марку--</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="model">Модель:</label>
+            <select id="model" name="model" disabled>
+                <option value="">--Сначала выберите марку--</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Год:</label>
+            <select id="year" name="year" disabled>
+                <option value="">--Сначала выберите модель--</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="engine">Мотор:</label>
+            <select id="engine" name="engine" disabled>
+                <option value="">--Сначала выберите год--</option>
+            </select>
+        </div>
+
+        <!-- Блок выбора этапа тюнинга (появится после выбора мотора) -->
+        <div id="stage-selection" class="form-group" style="display: none;">
+            <label>Этап тюнинга:</label>
+            <div id="stage-options">
+                <!-- Радиокнопки для выбора Stage будут здесь -->
+            </div>
+        </div>
+
+        <!-- Блок сравнения параметров (появится после выбора этапа) -->
+        <div id="comparison-table" style="display: none;">
+            <h2>Параметры</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Заводские</th>
+                        <th>После тюнинга</th>
+                        <th>Разница</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Строки таблицы будут здесь -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Блок дополнительных опций (появится после выбора этапа) -->
+        <div id="additional-options" class="form-group" style="display: none;">
+            <h2>Дополнительные опции</h2>
+            <div id="options-list">
+                <!-- Чекбоксы будут здесь -->
+            </div>
+        </div>
+
+        <!-- Обновленный блок результата -->
+        <div id="result-container" style="display: none;">
+             <hr>
+             <div id="result">
+                 <!-- Итоговая стоимость будет здесь -->
+             </div>
+        </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

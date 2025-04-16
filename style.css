@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.form-group select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #e9e9e9;
+    min-height: 50px;
+    color: #333;
+}
+
+/* Стили для выбора этапа */
+#stage-options label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+#stage-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Стили для таблицы сравнения */
+#comparison-table {
+    margin-top: 25px;
+}
+#comparison-table h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1em;
+}
+#comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+#comparison-table th,
+#comparison-table td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 0.95em;
+}
+#comparison-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+#comparison-table td:nth-child(1) { /* Первый столбец (Параметр) */
+    font-weight: 500;
+}
+#comparison-table td:nth-child(4) { /* Столбец Разница */
+    font-weight: bold;
+}
+.positive-diff {
+    color: green;
+}
+.negative-diff {
+    color: red;
+}
+
+/* Стили для дополнительных опций */
+#additional-options {
+     margin-top: 25px;
+}
+#additional-options h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1em;
+}
+#options-list div {
+    margin-bottom: 8px;
+}
+#options-list label {
+    display: flex; /* Используем flex для выравнивания */
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+#options-list input[type="checkbox"] {
+    margin-right: 8px;
+}
+#options-list .option-cost {
+    margin-left: auto; /* Прижимаем цену вправо */
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Стили для итогового результата */
+#result-container {
+    margin-top: 25px;
+}
+#result {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px 0;
+}
+#result strong {
+    color: #c00;
+} 
